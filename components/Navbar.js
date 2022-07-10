@@ -1,6 +1,7 @@
 import React, {useState} from 'react'; 
 import {Transition} from "@headlessui/react"; 
-import {Link} from "react-scroll"; 
+import Link from "next/Link"; 
+
 
 
 function Navbar(){
@@ -18,16 +19,16 @@ function Navbar(){
                       <div className='flex items-center justify-between w-full sm:mx-20'>
                           <div className='flex items-center justify-center flex-shrink-0 ml-10'> 
                           <h1 className='font-bold text-3xl cursor-pointer'>
-                            <a href="/">CICD</a>
+                            <Link href="/"><a>CICD</a></Link>
                           </h1>
                           </div>
                          
                           <div className='hidden md:block'>
                               <div className='flex items-baseline ml-10 space-x-10 '>
-                                  <a href="/" activeclass='home' to="home" smooth={true} offset={50} duration={500} className="px-3 py-2 text-lg font-semibold cursor-pointer hover:text-teal-700">Home</a>
-                                  <a href="/courses" activeclass='courses' to="courses" smooth={true} offset={50} duration={500} className="px-3 py-2 text-lg font-semibold cursor-pointer hover:text-teal-700">Courses</a>
-                                  <Link activeclass='contact' to="contact" smooth={true} offset={50} duration={500} className="px-3 py-2 text-lg font-semibold cursor-pointer hover:text-teal-700">Contact</Link>
-                                  <Link activeclass='my-courses' to="my-courses" smooth={true} offset={50} duration={500} className="px-3 py-2 text-lg font-semibold cursor-pointer hover:text-teal-700 text-center">My<span className="text-stone-200">..</span>Courses</Link>
+                                  <Link href="/"><a className="px-3 py-2 text-lg font-semibold cursor-pointer hover:text-teal-700">Home</a></Link>
+                                  <Link href="/courses"><a className="px-3 py-2 text-lg font-semibold cursor-pointer hover:text-teal-700">Courses</a></Link>
+                                  <Link href="/contact"><a className="px-3 py-2 text-lg font-semibold cursor-pointer hover:text-teal-700">Contact</a></Link>
+                                  <Link href="/my-courses"><a className="px-3 py-2 text-lg font-semibold cursor-pointer hover:text-teal-700 text-center">My<span className="text-stone-200">..</span>Courses</a></Link>
                               </div>
                           </div>
 
@@ -84,11 +85,11 @@ function Navbar(){
                 {(ref) => (
                     <div className="md:hidden" id="mobile-menu">
                         <div ref={ref} className="bg-stone-200 mx-4 mr-20 pt-4 pb-4 space-y-1">
-                            <a href="/" activeclass="home" to="home" smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-teal-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                            <a href="/courses" activeclass="courses" to="courses" smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-teal-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">Courses</a>
-                            <Link href="/contact" activeclass="contact" to="contact" smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-teal-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
-                            <Link href="/my-courses" activeclass="my-courses" to="my-courses" smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-teal-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">My Courses</Link>
-                            <Link href="/login" activeclass="login" to="login" smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-teal-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">Login</Link>
+                            <Link href="/" ><a className="cursor-pointer hover:bg-teal-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a></Link>
+                            <Link href="/courses"><a className="cursor-pointer hover:bg-teal-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">Courses</a></Link>
+                            <Link href="/contact"><a className="cursor-pointer hover:bg-teal-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a></Link>
+                            <Link href="/my-courses"><a className="cursor-pointer hover:bg-teal-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">My Courses</a></Link>
+                            <Link href="/login"><a className="cursor-pointer hover:bg-teal-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">Login</a></Link>
                         </div>
                     </div>
                 )} 
