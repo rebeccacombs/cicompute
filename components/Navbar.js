@@ -1,6 +1,6 @@
 import React, {useState} from 'react'; 
 import {Transition} from "@headlessui/react"; 
-import Link from "next/Link"; 
+import Link from "next/link"; 
 
 
 
