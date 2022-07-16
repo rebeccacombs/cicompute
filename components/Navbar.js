@@ -9,8 +9,7 @@ function Navbar(){
     return(
         <div>
             <div className='flex items-center justify-center w-full bg-stone-900 h-36'>
-        <h1 className="text-5xl font-semibold text-white ml-10">Cambridge Institute of Computation and Design</h1>
-     
+        <div className="text-5xl font-semibold text-white ml-10">Cambridge Institute of Computation and Design</div>
       </div>
 
           <nav className=' z-20 w-full bg-stone-200'>

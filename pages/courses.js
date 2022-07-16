@@ -1,24 +1,19 @@
 import React from 'react'
 import Image from "next/image"; 
-import heroImage from "../public/images/compsci.jpg"
+import webDev from "../public/images/web_dev.png"
+import Link from "next/link"
 
 function courses() {
     return (
-        <div>
-            <div className='flex justify-between text-center md:mx-20 md:pt-32 pt-28'>
-                <div className='w-3/4 h-96 shadow-xl rounded-full relative px-10 hidden md:block'>
-                    <Image src={heroImage} alt="compsci" layout='fill' objectFit='cover' className='rounded-full cursor-pointer hidden md:block'/>
-                </div>
-                <div className="flex flex-col md:ml-20 mx-10 mt-10">
-                    <h1 className="font-bold text-7xl text-left mb-5">
-                        Learn web development <span className='text-teal-700'>today.</span>
-                    </h1>
-                    <p className='text-left font-normal mb-5 flex-wrap text-xl'>
-                        Here at CICD, we aim at teaching anyone valuable computational/software skills. Not just for their job, but for their lives in the digital age. 
-                    </p>
-                </div> 
-                </div>
-        </div>
+        <div className="w-full my-20 h-auto flex flex-col justify-center items-center">
+            <h2 className="text-6xl font-bold text-center">Courses</h2>
+            <div className="md:flex sm:flex-col md:flex-row justify-center items-center gap-10 mt-10"> 
+            <div className="p-2 shadow-md hover:border">
+                     <div className="relative w-64 h-44"><Image src={webDev} layout="fill"/></div>
+                     <div className="text-center mt-2"><Link href="/courses/web_dev"><a className='text-center mt-2 font-medium text-lg hover:underline hover:text-teal-700'>Web Development</a></Link></div>
+                     </div>   
+            </div>
+        </div> 
     )
 }
 

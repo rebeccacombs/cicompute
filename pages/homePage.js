@@ -17,7 +17,7 @@ function homePage() {
                     <p className='text-left font-normal mb-5 flex-wrap text-xl'>
                         Here at CICD, we aim at teaching anyone valuable computational/software skills. Not just for their job, but for their lives in the digital age. 
                     </p>
-                    <Link href="/courses"><a className="font-semibold text-white md:mt-10 mt-5 pt-5 bg-teal-700 rounded-md w-80 h-16 text-xl hover:bg-black">
+                    <Link href="/courses"><a className="font-semibold text-white md:mt-10 mt-5 pt-5 bg-teal-700 rounded-md w-80 h-16 text-xl hover:bg-black hover:border">
                         Check out available courses
                     </a></Link>
                 </div>
